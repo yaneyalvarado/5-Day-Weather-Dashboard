@@ -1,0 +1,1 @@
+var searchHistoryList = $('#search-history-list');
