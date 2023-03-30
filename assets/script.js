@@ -40,5 +40,8 @@ $("#search-form").on("submit" , function () {
     if cityName === "" {
         alert("Please enter a valid city name");
         event.preventDefault();
+    } else {
+        weatherInfo(cityName);
+        forecast(cityName);
     }
 })
