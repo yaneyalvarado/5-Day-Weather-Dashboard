@@ -35,7 +35,7 @@ var forecast = function(cityName) {
 }
 
 // calling as the btn is clicked
-$("#search-button").on("submit" , function () {
+$("#search-button").on("click" , function () {
     event.preventDefault();
     if cityName === "" {
         alert("Please enter a valid city name");
