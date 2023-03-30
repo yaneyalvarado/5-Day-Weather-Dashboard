@@ -8,3 +8,5 @@ searchHistoryList = function (cityName) {
 // Creating entry with City name
 searchButton.addClass(".btn btn-primary");
 searchButton.text(cityName);
+
+var apiKey = "1b18ce13c84e21faafb19c931bb29331"
