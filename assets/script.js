@@ -1,4 +1,5 @@
-var searchButton = $('#search-button');
+// var searchButton = $('#search-button');
+var cityName = $("#search-button");
 var searchHistoryList = $('#search-history-list');
 var today = dayjs().format("MM, DD, YYYY");
 var currentTemperature = $("#current-temp");
