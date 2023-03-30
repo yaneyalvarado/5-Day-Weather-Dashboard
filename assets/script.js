@@ -23,3 +23,10 @@ var weatherInfo = function(cityName) {
   })
 
 } 
+
+// obtain and use data from open weather current weather API end point
+
+var forecast = function(cityName) {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}')
+    
+}
