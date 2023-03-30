@@ -2,3 +2,8 @@ h1 {
     margin-bottom: 0%;
     background-color: black;
 }
+
+#forecast {
+    justify-content: space-between;
+    background-color: blue;
+}
