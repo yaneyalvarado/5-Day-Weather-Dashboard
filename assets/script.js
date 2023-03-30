@@ -34,6 +34,11 @@ var forecast = function(cityName) {
       })
 }
 
+// calling as the btn is clicked
 $("#search-form").on("submit" , function () {
     event.preventDefault();
+    if cityName === "" {
+        alert("Please enter a valid city name");
+        event.preventDefault();
+    }
 })
