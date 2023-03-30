@@ -36,7 +36,7 @@ var forecast = function(searchButton) {
 // calling as the btn is clicked
 var seachButton = $("#search-button").on("click" , function () {
     event.preventDefault();
-    if cityName === "" {
+    if searchButton === "" {
         alert("Please enter a valid city name");
         event.preventDefault();
     } else {
