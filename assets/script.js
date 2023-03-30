@@ -1,6 +1,7 @@
 var searchButton = $('#search-button');
 var searchHistoryList = $('#search-history-list');
-var today = dayjs().format("MM, DD, YYYY")
+var today = dayjs().format("MM, DD, YYYY");
+var currentTemperature = $("#current-temp");
 
 searchHistoryList = function (cityName) {
     $('.past-search:contains("' + cityName + '")').remove();
