@@ -27,7 +27,7 @@ var weatherInfo = function(cityName) {
 // obtain and use data from open weather current weather API end point
 
 var forecast = function(searchButton) {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=9f112416334ce37769e5c8683b218a0d')
       .then(function(response) {
         return response.json();
       })
