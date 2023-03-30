@@ -16,7 +16,7 @@ searchButton.text(cityName);
 var apiKey = "1b18ce13c84e21faafb19c931bb29331"
 // obtain and use data from open weather current weather API end point
 var weatherInfo = function(cityName) {
-  fetch('https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}')
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=9f112416334ce37769e5c8683b218a0d')
   // obtain response and convert to objects
   .then(function(response) {
     return response.json();
