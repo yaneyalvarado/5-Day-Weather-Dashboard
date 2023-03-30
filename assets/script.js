@@ -1,5 +1,5 @@
-// var searchButton = $('#search-button');
-var cityName = $("#search-button").val();
+var searchButton = $('#search-button');
+// var cityName = $("#search-button").val();
 var searchHistoryList = $('#search-history-list');
 var today = dayjs().format("MM, DD, YYYY");
 var currentTemperature = $("#current-temp");
@@ -27,7 +27,7 @@ var weatherInfo = function(cityName) {
 
 // obtain and use data from open weather current weather API end point
 
-var forecast = function(cityName) {
+var forecast = function(searchButton) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}')
       .then(function(response) {
         return response.json();
