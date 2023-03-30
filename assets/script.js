@@ -1,5 +1,5 @@
 // var searchButton = $('#search-button');
-var cityName = $("#search-button");
+var cityName = $("#search-button").val();
 var searchHistoryList = $('#search-history-list');
 var today = dayjs().format("MM, DD, YYYY");
 var currentTemperature = $("#current-temp");
@@ -33,3 +33,7 @@ var forecast = function(cityName) {
         return response.json();
       })
 }
+
+$("#search-form").on("submit" , function () {
+    event.preventDefault();
+})
