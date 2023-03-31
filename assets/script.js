@@ -1,4 +1,4 @@
-var searchValue = $('#search-value').val("");
+var searchValue = $('#search-value');
 var searchHistoryList = $('#search-history-list');
 // var today = dayjs().format("MM, DD, YYYY");
 var currentTemperature = $("#current-temp");
@@ -10,12 +10,12 @@ searchHistoryList = function (cityName) {
 }
 
 // Creating entry with City name
-searchButton.addClass(".btn btn-primary");
-searchButton.text(cityName);
+// searchButton.addClass(".btn btn-primary");
+// searchButton.text(cityName);
 
 // obtain and use data from open weather current weather API end point
 var weatherInfo = function(cityName) {
-  fetch('https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=9f112416334ce37769e5c8683b218a0d')
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=9f112416334ce37769e5c8683b218a0d')
   // obtain response and convert to objects
   .then(function(response) {
     return response.json();
@@ -25,8 +25,8 @@ var weatherInfo = function(cityName) {
 
 // obtain and use data from open weather current weather API end point
 
-var forecast = function(searchButton) {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=9f112416334ce37769e5c8683b218a0d')
+var forecast = function() {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=9f112416334ce37769e5c8683b218a0d')
       .then(function(response) {
         return response.json();
       })
@@ -37,10 +37,10 @@ var seachButton = $("#search-button")
 
 function submission(event) {
     event.preventDefault();
-    console.log("search-button-clicked")
-    if (searchButton === "") {
+    var cityName = searchValue.val()
+    console.log(cityName)
+    if (cityName === "") {
         alert("Please enter a valid city name");
-        event.preventDefault();
     } else {
         weatherInfo(cityName);
         forecast(cityName);
