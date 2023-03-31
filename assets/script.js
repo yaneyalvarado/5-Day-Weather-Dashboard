@@ -4,7 +4,7 @@ var searchHistoryList = $('#search-history-list');
 var currentTemperature = $("#current-temp");
 var currentHumidity = $("#current-humidity");
 var windSpeed = $("#current-wind-speed");
-var forecast = $("#forecast");
+var forecastEl = $("#forecast");
 searchHistoryList = function (cityName) {
     $('.past-search:contains("' + cityName + '")').remove();
 }
@@ -22,6 +22,9 @@ var weatherInfo = function(cityName) {
   })
 .then(function(response) {
   console.log(response)
+  currentTemperature.text(response.main.temp)
+  currentHumidity.text(response.main.humidity)
+  windSpeed.text(response.wind.speed)
 })
 } 
 
@@ -31,6 +34,21 @@ var forecast = function(cityName) {
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=9f112416334ce37769e5c8683b218a0d')
       .then(function(response) {
         return response.json();
+      })
+      .then(function(response) {
+        console.log(response)
+        for (let i = 0; i < 40; i+=8) {
+         forecastEl.append( $(`
+          <div>
+          <p class="mb-0">Date: <span class="current-temp">${response.list[i].dt_txt.slice(0 , 10)}</span></p>
+          <p class="mb-0">Temperature: <span class="current-temp">${response.list[i].main.temp}</span></p>
+          <p class="mb-0">Humidity: <span class="current-humidity">${response.list[i].main.humidity}</span></p>
+          <p class="mb-0">Wind Speed: <span class="current-wind-speed">${response.list[i].wind.speed}</span></p>
+          </div>
+          `))
+          
+        }
+
       })
 }
 
