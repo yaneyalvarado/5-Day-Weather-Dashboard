@@ -20,13 +20,15 @@ var weatherInfo = function(cityName) {
   .then(function(response) {
     return response.json();
   })
-
+.then(function(response) {
+  console.log(response)
+})
 } 
 
 // obtain and use data from open weather current weather API end point
 
-var forecast = function() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=9f112416334ce37769e5c8683b218a0d')
+var forecast = function(cityName) {
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=9f112416334ce37769e5c8683b218a0d')
       .then(function(response) {
         return response.json();
       })
