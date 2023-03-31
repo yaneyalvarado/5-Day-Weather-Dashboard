@@ -1,6 +1,6 @@
 var searchValue = $('#search-value').val("");
 var searchHistoryList = $('#search-history-list');
-var today = dayjs().format("MM, DD, YYYY");
+// var today = dayjs().format("MM, DD, YYYY");
 var currentTemperature = $("#current-temp");
 var currentHumidity = $("#current-humidity");
 var windSpeed = $("#current-wind-speed");
@@ -33,13 +33,17 @@ var forecast = function(searchButton) {
 }
 
 // calling as the btn is clicked
-var seachButton = $("#search-button").on("click" , function () {
+var seachButton = $("#search-button")
+
+function submission(event) {
     event.preventDefault();
-    if searchButton === "" {
+    console.log("search-button-clicked")
+    if (searchButton === "") {
         alert("Please enter a valid city name");
         event.preventDefault();
     } else {
         weatherInfo(cityName);
         forecast(cityName);
     }
-})
+}
+seachButton.on("click" , submission)
