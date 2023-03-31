@@ -1,10 +1,16 @@
 h1 {
+    display: flex;
     margin-bottom: 0%;
-    background-color: black;
+    background-color:brown;
     color: white;
 }
 
 #forecast {
     justify-content: space-between;
-    background-color: blue;
+    background-color: burlywood;
+}
+
+#weatherinfo {
+    background-color: brown;
+    justify-content: space-between;
 }
