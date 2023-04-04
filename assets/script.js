@@ -1,3 +1,5 @@
+// Define variables (by ID in HTML)
+  
 var searchValue = $('#search-value');
 var searchHistoryList = $('#search-history-list');
 var currentTemperature = $("#current-temp");
@@ -9,6 +11,7 @@ searchHistoryList = function (nameOfCity) {
 }
 
 // obtain and use data from open weather current weather API end point
+
 var weatherInfo = function(nameOfCity) {
   fetch('https://api.openweathermap.org/data/2.5/weather?q=' + nameOfCity + '&appid=9f112416334ce37769e5c8683b218a0d')
   // obtain response and convert to objects
@@ -20,6 +23,7 @@ var weatherInfo = function(nameOfCity) {
   currentTemperature.text(response.main.temp)
   currentHumidity.text(response.main.humidity)
   windSpeed.text(response.wind.speed)
+
 })
 } 
 
@@ -47,8 +51,12 @@ var forecast = function(nameOfCity) {
       })
 }
 
-// calling as the btn is clicked
+// Giving the search btn a value
+
 var seachButton = $("#search-button")
+
+// creating the function as the "submit" btn is clicked. If the search btn is empty, an alert must show to let the user know
+// to enter a valid name of city. Once valid name is entered, the user shall see the weather and the forecast. 
 
 function submission(event) {
     event.preventDefault();
@@ -61,4 +69,11 @@ function submission(event) {
         forecast(nameOfCity);
     }
 }
+
+// executing the function  as the btn is clicked
+
 seachButton.on("click" , submission)
+
+
+
+
