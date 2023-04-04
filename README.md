@@ -1,7 +1,7 @@
 # 5-Day-Weather-Dashboard
 
 ## Description
-The Weather Dashboard website will allows all travelers to see the weather outlook for multiple cities.
+The Weather Dashboard website will allow all travelers to see the weather outlook for multiple cities.
 With this website, all travelers shall plan their trip accordingly. 
 
 ## User Story
