@@ -24,6 +24,7 @@ With this website, all travelers shall plan their trip accordingly.
 https://user-images.githubusercontent.com/123707509/229679102-b26b8895-4dc8-4340-907d-8ef3f4e09699.mov
 
 ## Deployment
+https://yaneyalvarado.github.io/5-Day-Weather-Dashboard/
 
 ## GitHub
 https://github.com/yaneyalvarado/5-Day-Weather-Dashboard
