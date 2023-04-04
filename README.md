@@ -5,9 +5,9 @@ The Weather Dashboard website will allow all travelers to see the weather outloo
 With this website, all travelers shall plan their trip accordingly. 
 
 ## User Story
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
+- AS A traveler
+- I WANT to see the weather outlook for multiple cities
+- SO THAT I can plan a trip accordingly
 
 ## Acceptance Criteria
 - GIVEN a weather dashboard with form inputs
