@@ -4,14 +4,14 @@ var currentTemperature = $("#current-temp");
 var currentHumidity = $("#current-humidity");
 var windSpeed = $("#current-wind-speed");
 var forecastEl = $("#forecast");
-searchHistoryList = function (cityName) {
-    $('.past-search:contains("' + cityName + '")').remove();
+searchHistoryList = function (nameOfCity) {
+    $('.past-search:contains("' + nameOfCity + '")').remove();
 }
 var apiKey = bd598c9d6cb7b9c64a74124c930dbdcc
 
 // obtain and use data from open weather current weather API end point
-var weatherInfo = function(cityName) {
-  fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=9f112416334ce37769e5c8683b218a0d')
+var weatherInfo = function(nameOfCity) {
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=' + nameOfCity + '&appid=9f112416334ce37769e5c8683b218a0d')
   // obtain response and convert to objects
   .then(function(response) {
     return response.json();
@@ -26,8 +26,8 @@ var weatherInfo = function(cityName) {
 
 // obtain and use data from open weather current weather API end point
 
-var forecast = function(cityName) {
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=9f112416334ce37769e5c8683b218a0d')
+var forecast = function(nameOfCity) {
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + nameOfCity + '&appid=9f112416334ce37769e5c8683b218a0d')
       .then(function(response) {
         return response.json();
       })
@@ -53,13 +53,13 @@ var seachButton = $("#search-button")
 
 function submission(event) {
     event.preventDefault();
-    var cityName = searchValue.val()
-    console.log(cityName)
-    if (cityName === "") {
+    var nameOfCity = searchValue.val()
+    console.log(nameOfCity)
+    if (nameOfCity === "") {
         alert("Please enter a valid city name");
     } else {
-        weatherInfo(cityName);
-        forecast(cityName);
+        weatherInfo(nameOfCity);
+        forecast(nameOfCity);
     }
 }
 seachButton.on("click" , submission)
