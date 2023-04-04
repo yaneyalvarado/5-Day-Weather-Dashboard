@@ -1,6 +1,5 @@
 var searchValue = $('#search-value');
 var searchHistoryList = $('#search-history-list');
-// var today = dayjs().format("MM, DD, YYYY");
 var currentTemperature = $("#current-temp");
 var currentHumidity = $("#current-humidity");
 var windSpeed = $("#current-wind-speed");
@@ -9,9 +8,6 @@ searchHistoryList = function (cityName) {
     $('.past-search:contains("' + cityName + '")').remove();
 }
 
-// Creating entry with City name
-// searchButton.addClass(".btn btn-primary");
-// searchButton.text(cityName);
 
 // obtain and use data from open weather current weather API end point
 var weatherInfo = function(cityName) {
