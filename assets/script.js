@@ -10,7 +10,7 @@ searchHistoryList = function (nameOfCity) {
     $('.past-search:contains("' + nameOfCity + '")').remove();
 }
 
-// obtain and use data from open weather current weather API end point
+// obtain the API data to use the data from open weather map
 
 var weatherInfo = function(nameOfCity) {
   fetch('https://api.openweathermap.org/data/2.5/weather?q=' + nameOfCity + '&appid=9f112416334ce37769e5c8683b218a0d')
@@ -27,7 +27,7 @@ var weatherInfo = function(nameOfCity) {
 })
 } 
 
-// obtain and use data from open weather current weather API end point
+// obtain the API data to use the data from open weather map
 
 var forecast = function(nameOfCity) {
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + nameOfCity + '&appid=9f112416334ce37769e5c8683b218a0d')
