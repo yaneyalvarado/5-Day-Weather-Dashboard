@@ -55,7 +55,8 @@ var forecast = function(nameOfCity) {
 
 var seachButton = $("#search-button")
 
-// creating the function as the "submit" btn is clicked. If the search btn is empty, an alert must show to let the user know
+// creating the function as the "submit" btn is clicked. 
+// If the search btn is empty, an alert must pop up on the screen letting the user know
 // to enter a valid name of city. Once valid name is entered, the user shall see the weather and the forecast. 
 
 function submission(event) {
