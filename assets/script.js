@@ -7,7 +7,6 @@ var forecastEl = $("#forecast");
 searchHistoryList = function (nameOfCity) {
     $('.past-search:contains("' + nameOfCity + '")').remove();
 }
-var apiKey = bd598c9d6cb7b9c64a74124c930dbdcc
 
 // obtain and use data from open weather current weather API end point
 var weatherInfo = function(nameOfCity) {
